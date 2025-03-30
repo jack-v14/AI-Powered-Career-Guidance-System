@@ -1,0 +1,83 @@
+import React from "react";
+
+const App = () => {
+  return (
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center p-6">
+      {/* Hero Section */}
+      <section className="w-full max-w-5xl bg-blue-600 text-white p-8 rounded-lg shadow-md text-center relative">
+        <h1 className="text-3xl font-bold">AI-Powered Career Guidance System</h1>
+        <p className="mt-2">Personalized career recommendations, skill gap analysis, and job opportunities based on your profile.</p>
+        <button className="mt-4 px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg">Get Career Guidance Now!</button>
+        <div className="absolute top-4 right-4 flex space-x-4">
+          <button className="text-white">Log in</button>
+          <button className="text-white">Sign up</button>
+        </div>
+      </section>
+
+      {/* Dashboard Layout */}
+      <div className="w-full max-w-5xl bg-white shadow-md p-6 rounded-lg mt-6 flex">
+        {/* Sidebar */}
+        <aside className="w-1/4 bg-gray-50 p-4 rounded-lg">
+          <div className="flex items-center space-x-2 mb-6">
+            <div className="w-10 h-10 bg-gray-300 rounded-full"></div>
+            <span className="font-semibold">Jane</span>
+          </div>
+          <nav className="space-y-2">
+            <a href="#" className="block px-3 py-2 bg-blue-100 text-blue-600 rounded-lg">Dashboard</a>
+            <a href="#" className="block px-3 py-2 hover:bg-gray-200 rounded-lg">Recommendations</a>
+            <a href="#" className="block px-3 py-2 hover:bg-gray-200 rounded-lg">Jobs</a>
+            <a href="#" className="block px-3 py-2 hover:bg-gray-200 rounded-lg">Settings</a>
+          </nav>
+        </aside>
+
+        {/* Main Content */}
+        <main className="w-3/4 pl-6">
+          {/* Profile Summary */}
+          <div className="bg-gray-50 p-4 rounded-lg mb-4">
+            <h3 className="font-semibold">Profile Summary</h3>
+            <div className="mt-2 flex flex-wrap gap-2">
+              <span className="px-3 py-1 bg-gray-200 rounded-lg">Python</span>
+              <span className="px-3 py-1 bg-gray-200 rounded-lg">Data Analysis</span>
+            </div>
+            <p className="mt-2">B.S. in Computer Science</p>
+            <button className="mt-2 px-4 py-2 bg-blue-600 text-white rounded-lg">Upload Resume</button>
+          </div>
+
+          {/* Career Recommendation */}
+          <div className="bg-gray-50 p-4 rounded-lg mb-4">
+            <h3 className="font-semibold">Career Recommendation</h3>
+            <form className="mt-2 space-y-2">
+              <input type="text" placeholder="Skills" className="p-3 border rounded-lg w-full" />
+              <input type="text" placeholder="Education" className="p-3 border rounded-lg w-full" />
+              <input type="text" placeholder="Interests" className="p-3 border rounded-lg w-full" />
+              <button className="px-4 py-2 bg-blue-600 text-white rounded-lg w-full">Get Recommendations</button>
+            </form>
+          </div>
+
+          {/* Job Listings */}
+          <div className="bg-gray-50 p-4 rounded-lg">
+            <h3 className="font-semibold">Job Listings</h3>
+            <div className="mt-2 space-y-2">
+              <div className="flex justify-between bg-white p-3 rounded-lg shadow">
+                <div>
+                  <p className="font-semibold">Software Engineer</p>
+                  <p className="text-gray-500 text-sm">Techcorp</p>
+                </div>
+                <button className="px-4 py-2 bg-blue-600 text-white rounded-lg">Apply</button>
+              </div>
+              <div className="flex justify-between bg-white p-3 rounded-lg shadow">
+                <div>
+                  <p className="font-semibold">Data Analyst</p>
+                  <p className="text-gray-500 text-sm">Innovatech</p>
+                </div>
+                <button className="px-4 py-2 bg-blue-600 text-white rounded-lg">Apply</button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  );
+};
+
+export default App;
